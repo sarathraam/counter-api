@@ -57,6 +57,8 @@ public class SearchServiceImpl implements SearchService {
 
         }
 
+        // read all words from file, sort them by most frequent first
+        // and store it as linked map - useful both for search and top functions
         String[] allWords = builder.toString().split("\\s+");
         wordTokens = mapSortedByValue(
                 Arrays.stream(allWords)
@@ -98,6 +100,8 @@ public class SearchServiceImpl implements SearchService {
     @Override
     public SearchResult topNWords(int n) {
 
+        // handles negative inputs;
+        // upper limit is not a problem since stream's limit() should handle it gracefully
         int capped = Math.max(0, n);
 
         List<Map.Entry<String, Long>> topWords = wordTokens.entrySet().stream()
