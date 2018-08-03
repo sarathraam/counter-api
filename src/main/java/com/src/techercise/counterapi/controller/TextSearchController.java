@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import static com.src.techercise.counterapi.ApplicationConstants.PLAIN_TEXT_CSV;
@@ -73,9 +74,9 @@ public class TextSearchController {
 
     }
 
-    private String pipeSeparatedValues(Item item) {
+    private String pipeSeparatedValues(Map.Entry item) {
 
-        return item.getWord() + "|" + item.getTimes();
+        return item.getKey() + "|" + item.getValue();
 
     }
 }

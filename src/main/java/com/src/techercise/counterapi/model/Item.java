@@ -3,9 +3,9 @@ package com.src.techercise.counterapi.model;
 public class Item {
 
     private String word;
-    private int times;
+    private Long times;
 
-    public Item(String word, int times) {
+    public Item(String word, Long times) {
         this.word = word;
         this.times = times;
     }
@@ -15,7 +15,7 @@ public class Item {
         return word;
     }
 
-    public int getTimes() {
+    public Long getTimes() {
         return times;
     }
 }

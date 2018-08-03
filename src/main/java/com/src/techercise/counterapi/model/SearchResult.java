@@ -2,21 +2,20 @@ package com.src.techercise.counterapi.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.Map;
+
 public class SearchResult {
 
     @JsonProperty("counts")
-    private Item[] items;
+    private Map.Entry[] items;
 
 
-    public SearchResult(Item[] items) {
+    public SearchResult(Map.Entry[] items) {
         this.items = items;
     }
 
 
-    public Item[] getItems() {
+    public Map.Entry[] getItems() {
         return items;
     }
-
-
-
 }
