@@ -1,4 +1,4 @@
-package com.src.techercise.counterapi.controller.service;
+package com.src.techercise.counterapi.service;
 
 import com.src.techercise.counterapi.model.SearchResult;
 import org.slf4j.Logger;

@@ -1,7 +1,6 @@
 package com.src.techercise.counterapi.controller;
 
-import com.src.techercise.counterapi.controller.service.SearchService;
-import com.src.techercise.counterapi.model.Item;
+import com.src.techercise.counterapi.service.SearchService;
 import com.src.techercise.counterapi.model.SearchCriteria;
 import com.src.techercise.counterapi.model.SearchResult;
 import org.slf4j.Logger;
